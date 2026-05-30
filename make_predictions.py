@@ -1,5 +1,7 @@
 """Prediccion script for the MLflow model.
 
+## Description
+
 This script loads a model from MLflow and makes predictions on a dataset.
 
 $ python3 make_predictions.py
@@ -18,7 +20,7 @@ x = df.drop(columns=["quality"])
 
 ## Debe verificarse el run_id del modelo que se quiere cargar
 ## Se puede obtener el run_id desde la interfaz de MLflow
-logged_model = "runs:/d5d366b8927240fc890102b0623c01a8/model"
+logged_model = "runs:/7e545a1fb76042b5bee3ab26921028a6/model"
 loaded_model = mlflow.pyfunc.load_model(logged_model)
 y = loaded_model.predict(x)
 
